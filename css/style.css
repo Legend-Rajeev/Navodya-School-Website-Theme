@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", Verdana, "sans-serif";
+    font-size: 18px;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color : #1F2937;
+    --secondary-color : #1FACEB;
+    --gray-color : #6a6a6a;
+    --gray-color-200 : #efefef;
+    --lightgray-color : #cecece;
+    --black-color : #000;
+    --white-color : #fff;
+}
+
+/* <============= Start Header ============> */
+
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../../Images/header-background.jpeg');
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    opacity: 1;
+    z-index: -1;
+}
+header .header-content{
+    /* background: var(--primary-color); */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+    height: 10rem;
+}
+header .header-content .logo-part{
+    width: 70%;
+    height: 100%;
+    display: flex;
+}
+.logo-part .logo{
+    width: auto;
+    height: 100%;
+    margin-right: 0.5rem;
+    display: flex;
+}
+
+.logo-part .sc-details{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-part .sc-details h3{
+    font-size: 2rem;
+    padding: 0.2rem 0rem 0.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--white-color);
+}
+.logo-part .sc-details .sc-classes{
+    border: 0.1rem dotted var(--gray-color);
+    color: var(--white-color);
+    border-radius: 0.3rem;
+    display: inline;
+    width: 4rem;
+    text-align: center;
+    padding: 0.3rem 0.2rem;
+    font-size: 0.8rem;
+}
+.logo-part .sc-details .sc-desc{
+    display: flex;
+    width: 70%;
+    color: var(--lightgray-color)
+}
+i{
+    display: inline!important;
+    height: 0.9rem;
+}
+.sc-details .sc-desc .sc-place{
+    margin-right: 3rem;
+}
+.logo-part .sc-details .sc-desc span{
+    margin-left: 0.3rem;
+}
+.sc-desc .ds{
+    margin-left: 0.1rem!important;
+}
+header .announcement-box{
+    width: 30%;
+    height: 9rem;
+    padding: 0.5rem;
+    background: #CECECE61;
+    border-radius: 0.5rem;
+}
+header .announcement-box .anc-heading{
+    padding-left: 0;
+}
+.announcement-box .anc-heading h2{
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--white-color);
+    padding: 0.2rem 0.2rem;
+    width: 60%;
+    display: inline;
+    border-bottom: 0.2rem solid var(--white-color);
+}
+.announcement-box .anc-lines{
+    margin-top: 1.5rem;
+    line-height: 1.5rem;
+}
+.announcement-box .anc-lines a{
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--white-color);
+    display: block;
+}
+.announcement-box .anc-lines a:hover{
+    text-decoration: underline;
+}
+
+/* <============= End Header ============> */
+
+
+
+/* <============= Start Navigation ============> */
+nav{
+    display: flex;
+    align-items: center;
+    padding: 0rem 2rem;
+    height: 4rem;
+    background: var(--white-color);
+}
+nav > ul{
+    display: flex;
+    padding: 0.45rem 0rem;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li  a{
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    font-family: inherit;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s;
+}
+nav ul li a:hover{
+    color: var(--black-color);
+}
+nav ul li a.active{
+    color: var(--black-color);
+}
+nav ul li:hover > ul{
+    color: var(--black-color);
+    transition: all 0.4s ease-in-out;
+}
+nav ul li ul{
+    background-color: var(--gray-color-200);
+    box-shadow: 2px 2px 18px -20px var(--black-color);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 13rem;
+    padding: 0.4rem 0.3rem;
+    display: none;
+    border-radius: 0rem 0.5rem 0.5rem 0.5rem;
+    z-index: 999;
+    transition: all 1s ease-in-out;
+}
+nav ul li:hover ul{
+    display: block;
+}
+nav ul li ul li{
+    padding: 0.5rem 0rem;
+    transition: all 0.3s ease-in-out;
+}
+nav ul li ul li:hover{
+    background: var(--lightgray-color);
+    border-radius: 0.5rem;
+}
+nav ul li ul li a{
+    border: none;
+}
+
+/*  ========== Slider =========== */
+slider img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+slider .slider-content{
+    color: #fff;
+    position: relative;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 30rem;
+    transform: translateX(-50%);
+}
+.slider-content .slider-body{
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 50rem;
+    margin: 0 auto;
+    padding: 4rem;
+    padding-left: 3rem;
+}
+.slider-body-content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0.519) 100%);
+    width: 100%;
+    height: 100%;
+}
+.slider-body h1{
+    font-size: 2rem;
+}
+.slider-body p{
+    font-size: 1rem;
+    padding: 1.5rem 0rem;
+}
+.slider-body .register-btn{
+    outline: none;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 3rem;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 0.7rem 1.7rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.slider-body .register-btn:hover{
+    background: var(--gray-color);
+    color: var(--black-color);
+    border: 2px solid var(--gray-color);
+}
+
+/* ========== Welcome Message =========== */
+.welcome-area{
+    background: var(--white-color);
+    height: 600px;
+    padding: 4rem 3rem;
+    display: flex;
+}
+.welcome-area .welcome-image{
+    width: 50%;
+}
+.welcome-area .welcome-image img{
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    box-shadow: 2px 4px 30px rgb(0 0 0 / 20%);
+}
+.welcome-area .welcome-content{
+    width: 50%;
+}
+.welcome-content h2{
+    font-size: 2.5rem;
+    padding: 1rem 0rem;
+    color: var(--secondary-color);
+}
+.welcome-content p{
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+}
+
+/*  ============= school data ========== */
+.school-data {
+    position: relative;
+    background:var(--lightgray-color);
+    height: 20rem;
+    padding: 0 3rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+.school-data::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 20px;
+    background-size: 20px 100%;
+    background-image: linear-gradient(135deg, var(--lightgray-color) 25%, transparent 25%), linear-gradient(225deg, var(--lightgray-color) 25%, transparent 25%);
+    background-position: 0 0;
+}
+.school-data .school-data-body{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.school-data .school-data-item{
+    width: 250px;
+    height: 250px;
+    background: var(--white-color);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem 0.3rem;
+    box-shadow: 2px 4px 30px rgb(0 0 0 / 20%);
+    transition: all 0.3s ease-in-out;
+}
+.school-data .school-data-item:hover{
+    box-shadow: 5px 5px 10px;
+}
+.school-data-item i{
+    font-size: 5rem;
+    color: var(--primary-color);
+}
+.school-data-item p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* ========== Footer ============ */
+.footer-section{
+    padding-top: 2.3rem;
+}
+.footer{
+    height: auto;
+    padding: 3rem;
+    background: var(--primary-color);
+    color: var(--lightgray-color);
+}
+.footer .footer-body{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer-body .f-col{
+    width: calc(100% / 3);
+    padding-right: 2rem;
+}
+.footer-body h2{
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+.footer-body .contact-details p{
+    font-size: 1rem;   
+    padding: 0.5rem 0rem;
+}
+.footer-body .contact-details .contact-info{
+    padding: 1rem 0rem;
+    line-height: 1.5rem;
+}
+.contact-info span{
+    margin-left: 0.5rem;
+}
+.footer-body .usefull-links ul li{
+    list-style: none;
+}
+.usefull-links ul li a{
+    color: var(--lightgray-color);
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.5rem;
+}
+.usefull-links ul li a:hover{
+    text-decoration: underline;
+    color: var(--white-color);
+}
+.enquiry-section .enquiry-form{
+    display: flex;
+    flex-direction: column;
+}
+.enquiry-form .form-group{
+    display: flex;
+    margin: 0.5rem 0rem;
+}
+.enquiry-form .form-group input,
+.enquiry-form .form-group select{
+    width: 100%;
+    outline: none;
+    margin-right: 5px;
+    background: none;
+    border: 1px solid var(--lightgray-color);
+    border-radius: 0.3rem;
+    padding: 0.7rem;
+    color: lightgray;
+}
+#enquiry-submit{
+    width: 10rem;
+    background: var(--secondary-color);
+    outline: none;
+    border: none;
+    padding: 0.7rem 0rem;
+    border-radius: 0.3rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+#enquiry-submit:hover{
+    box-shadow: 2px 2px 10px 0px var(--black-color);
+}
+.footer-copyright{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-copyright .copyright{
+    font-size: 1rem;
+}
+.footer-copyright .f-social-media a{
+    text-decoration: none;
+    color: var(--lightgray-color);
+    margin: 0 0.7rem;
+    transition: all 0.3s ease-in-out;
+}
+.footer-copyright .f-social-media a:hover{
+    color: var(--white-color);
+}
